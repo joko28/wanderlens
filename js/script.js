@@ -1,7 +1,7 @@
 // Images and Captions
 const images = [
   {
-    src: "../images/benjamin-chambon-rOoaNIRO5fM-unsplash.jpg",
+    src: "/images/benjamin-chambon-rOoaNIRO5fM-unsplash.jpg",
     caption: "A serene reflection.",
   },
   {
