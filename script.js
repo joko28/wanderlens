@@ -1,64 +1,65 @@
 // Images and Captions
 const images = [
   {
-    src: "images/benjamin-chambon-rOoaNIRO5fM-unsplash.jpg",
-    caption: "A serene reflection.",
-  },
-  {
     src: "images/giang-nguyen-rv3YPJbedhY-unsplash.jpg",
-    caption: "Chaos within calm.",
-  },
-  {
-    src: "images/zhenyu-luo-dFMNqqBMPGU-unsplash.jpg",
-    caption: "A fleeting moment.",
-  },
-  {
-    src: "images/chi-xiang--Q-PZARQIhU-unsplash.jpg",
-    caption: "Abstract harmony.",
-  },
-  {
-    src: "images/janis-dzenis-2Vf7aybJxBs-unsplash.jpg",
-    caption: "Abstract harmony.",
-  },
-  {
-    src: "images/janis-dzenis-4qVBguW9ibM-unsplash.jpg",
-    caption: "Abstract harmony.",
-  },
-  {
-    src: "images/janis-dzenis-laLUon9AaFo-unsplash.jpg",
-    caption: "Abstract harmony.",
-  },
-  {
-    src: "images/janis-dzenis-bUpGUcqTzHU-unsplash.jpg",
-    caption: "Abstract harmony.",
-  },
-  {
-    src: "images/max-fuchs-DG6q0r7RYS8-unsplash.jpg",
-    caption: "Abstract harmony.",
-  },
-  {
-    src: "images/carlos-A0xv0-vSpkc-unsplash.jpg",
-    caption: "Abstract harmony.",
-  },
-  {
-    src: "images/kellen-riggin-105M1xsnV4o-unsplash.jpg",
-    caption: "Abstract harmony.",
-  },
-  {
-    src: "images/mathias-reding-5HUg48NGlwc-unsplash.jpg",
-    caption: "Abstract harmony.",
-  },
-  {
-    src: "images/mathias-reding-ouwGKHExTEw-unsplash.jpg",
-    caption: "Abstract harmony.",
+    caption: "Credit: Giang Nguyen.",
   },
   {
     src: "images/guillaume-didelet-zTTceeGcKsU-unsplash.jpg",
-    caption: "Abstract harmony.",
+    caption: "Credit: Guillaume Didelet.",
+  },
+  {
+    src: "images/max-fuchs-DG6q0r7RYS8-unsplash.jpg",
+    caption: "Credit: Max Fuchs.",
+  },
+  {
+    src: "images/jimmy-chang-ACt8ycSzpdE-unsplash.jpg",
+    caption: "Credit: Jimmy Chang.",
+  },
+  {
+    src: "images/joakim-nadell-K67sBVqLLuw-unsplash.jpg",
+    caption: "Credit: Joakin Nadell.",
+  },
+  {
+    src: "images/howard-bouchevereau-042Srn0-82o-unsplash.jpg",
+    caption: "Credit: Howard Bouchevereau.",
+  },
+
+  {
+    src: "images/kellen-riggin-105M1xsnV4o-unsplash.jpg",
+    caption: "Credit: Kellen Riggin.",
+  },
+  {
+    src: "images/mathias-reding-5HUg48NGlwc-unsplash.jpg",
+    caption: "Credit: Mathais Reding.",
   },
   {
     src: "images/mathias-reding-JoI6kkQbuAk-unsplash.jpg",
-    caption: "Abstract harmony.",
+    caption: "Credit: Mathias Reding.",
+  },
+  {
+    src: "images/alex-wong-l5Tzv1alcps-unsplash.jpg",
+    caption: "Credit: Alex Wong.",
+  },
+  {
+    src: "images/lance-anderson-QdAAasrZhdk-unsplash.jpg",
+    caption: "Credit: Lance Anderson.",
+  },
+  {
+    src: "images/anders-jilden-Sc5RKXLBjGg-unsplash.jpg",
+    caption: "Credit: Anders Jilden.",
+  },
+  {
+    src: "images/julien-moreau-688Fna1pwOQ-unsplash.jpg",
+    caption: "Credit: Julian Moreau.",
+  },
+  {
+    src: "images/matthew-henry-VviFtDJakYk-unsplash.jpg",
+    caption: "Credit: Matthew Henry.",
+  },
+  {
+    src: "images/grant-lemons-jTCLppdwSEc-unsplash.jpg",
+    caption: "Credit: Grant Lemons.",
   },
 ];
 
