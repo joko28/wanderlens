@@ -22,7 +22,8 @@ const images = [
   },
   {
     src: "images/howard-bouchevereau-042Srn0-82o-unsplash.jpg",
-    caption: "Credit: Howard Bouchevereau.",
+    caption:
+      "Credit: Howard Bouchevereau, Feb. 24, 2019. Location: Rennes, France.",
   },
 
   {
