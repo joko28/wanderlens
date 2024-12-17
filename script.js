@@ -123,13 +123,13 @@ if (detailsPage) {
 
 // Firebase Configuration
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+  apiKey: "AIzaSyCuqdh6yGCEw_oF7EuRYNXmYjFKpQ-eis0",
+  authDomain: "wander-lens.firebaseapp.com",
+  databaseURL: "https://wander-lens.firebaseio.com",
   projectId: "wander-lens",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  storageBucket: "wander-lens.firebasestorage.app",
+  messagingSenderId: "714629855391",
+  appId: "1:714629855391:web:b9a7bbd2c8112629b30aaa",
 };
 
 // Initialize Firebase
