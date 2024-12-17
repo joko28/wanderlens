@@ -5,19 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wander Lens - Details</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js"></script>
   </head>
   <body>
     <div id="details">
       <button id="back" class="nav-button">← Back to Mosaic</button>
       <div id="image-container">
-        <img
-          id="detail-image"
-          src="images/benjamin-chambon-rOoaNIRO5fM-unsplash.jpg"
-          alt="Detailed View" />
+        <img id="detail-image" src="" alt="Detailed View" />
         <div id="detail-caption"></div>
       </div>
-      <button id="next" class="nav-button">Next →</button>
-      <button id="prev" class="nav-button">← Previous</button>
+      <div class="nav-buttons">
+        <button id="prev" class="nav-button">← Previous</button>
+        <button id="next" class="nav-button">Next →</button>
+      </div>
+
+      <!-- Comment Section -->
+      <div id="comment-section">
+        <h3>Comments</h3>
+        <textarea
+          id="comment-box"
+          placeholder="Leave a comment..."
+          rows="4"></textarea>
+        <button id="submit-comment">Submit</button>
+        <div id="comments-list"></div>
+      </div>
     </div>
 
     <script src="script.js"></script>

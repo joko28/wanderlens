@@ -1,66 +1,70 @@
-// Images and Captions
+// Image Details
 const images = [
   {
     src: "images/giang-nguyen-rv3YPJbedhY-unsplash.jpg",
-    caption: "Credit: Giang Nguyen.",
+    captions: ["Credit: Giang Nguyen."],
   },
   {
     src: "images/guillaume-didelet-zTTceeGcKsU-unsplash.jpg",
-    caption: "Credit: Guillaume Didelet.",
+    captions: ["Credit: Guillaume Didelet."],
   },
   {
     src: "images/max-fuchs-DG6q0r7RYS8-unsplash.jpg",
-    caption: "Credit: Max Fuchs.",
+    captions: ["Credit: Max Fuchs."],
   },
   {
     src: "images/jimmy-chang-ACt8ycSzpdE-unsplash.jpg",
-    caption: "Credit: Jimmy Chang.",
+    captions: ["Credit: Jimmy Chang."],
   },
   {
     src: "images/joakim-nadell-K67sBVqLLuw-unsplash.jpg",
-    caption: "Credit: Joakin Nadell.",
+    captions: [
+      "Credit: Joakim Nadell, May 28, 2018.",
+      "Location: København, Denmark. Axel Towers (Copenhagen) by Lundgaard & Tranberg.",
+    ],
   },
   {
     src: "images/howard-bouchevereau-042Srn0-82o-unsplash.jpg",
-    caption:
-      "Credit: Howard Bouchevereau, Feb. 24, 2019. Location: Rennes, France.",
+    captions: [
+      "Credit: Howard Bouchevereau, Feb. 24, 2019.",
+      "Location: Rennes, France.",
+    ],
   },
-
   {
     src: "images/kellen-riggin-105M1xsnV4o-unsplash.jpg",
-    caption: "Credit: Kellen Riggin.",
+    captions: ["Credit: Kellen Riggin."],
   },
   {
     src: "images/mathias-reding-5HUg48NGlwc-unsplash.jpg",
-    caption: "Credit: Mathais Reding.",
+    captions: ["Credit: Mathias Reding."],
   },
   {
     src: "images/mathias-reding-JoI6kkQbuAk-unsplash.jpg",
-    caption: "Credit: Mathias Reding.",
+    captions: ["Credit: Mathias Reding."],
   },
   {
     src: "images/alex-wong-l5Tzv1alcps-unsplash.jpg",
-    caption: "Credit: Alex Wong.",
+    captions: ["Credit: Alex Wong."],
   },
   {
     src: "images/lance-anderson-QdAAasrZhdk-unsplash.jpg",
-    caption: "Credit: Lance Anderson.",
+    captions: ["Credit: Lance Anderson."],
   },
   {
     src: "images/anders-jilden-Sc5RKXLBjGg-unsplash.jpg",
-    caption: "Credit: Anders Jilden.",
+    captions: ["Credit: Anders Jilden."],
   },
   {
     src: "images/julien-moreau-688Fna1pwOQ-unsplash.jpg",
-    caption: "Credit: Julian Moreau.",
+    captions: ["Credit: Julian Moreau."],
   },
   {
     src: "images/matthew-henry-VviFtDJakYk-unsplash.jpg",
-    caption: "Credit: Matthew Henry.",
+    captions: ["Credit: Matthew Henry."],
   },
   {
     src: "images/grant-lemons-jTCLppdwSEc-unsplash.jpg",
-    caption: "Credit: Grant Lemons.",
+    captions: ["Credit: Grant Lemons."],
   },
 ];
 
@@ -90,8 +94,13 @@ if (detailsPage) {
   const detailImage = document.getElementById("detail-image");
   const detailCaption = document.getElementById("detail-caption");
 
-  detailImage.src = images[currentIndex].src;
-  detailCaption.textContent = images[currentIndex].caption;
+  const currentImage = images[currentIndex];
+  detailImage.src = currentImage.src;
+
+  // Render captions as separate lines
+  detailCaption.innerHTML = currentImage.captions
+    .map((line) => `<p>${line}</p>`)
+    .join("");
 
   document.getElementById("next").addEventListener("click", () => {
     if (currentIndex < images.length - 1) {
@@ -111,3 +120,56 @@ if (detailsPage) {
     window.location.href = "index.html";
   });
 }
+
+// Firebase Configuration
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+  projectId: "wander-lens",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+// DOM Elements
+const commentBox = document.getElementById("comment-box");
+const submitButton = document.getElementById("submit-comment");
+const commentsList = document.getElementById("comments-list");
+
+// Get current image ID from URL
+const currentImage = new URLSearchParams(window.location.search).get("image");
+
+// Set image and caption dynamically (adjust as per your folder structure and caption logic)
+detailImage.src = `images/${currentImage}.jpg`;
+detailCaption.innerHTML = `Details for image: ${currentImage}`;
+
+// Submit Comment
+submitButton.addEventListener("click", () => {
+  const comment = commentBox.value.trim();
+  if (comment) {
+    const commentId = db.ref("comments/" + currentImage).push().key; // Unique comment ID
+    db.ref("comments/" + currentImage + "/" + commentId).set({
+      text: comment,
+      timestamp: Date.now(),
+    });
+    commentBox.value = ""; // Clear the input
+  }
+});
+
+// Load Comments
+db.ref("comments/" + currentImage).on("value", (snapshot) => {
+  commentsList.innerHTML = ""; // Clear existing comments
+  const comments = snapshot.val();
+  if (comments) {
+    Object.values(comments).forEach((comment) => {
+      const commentElement = document.createElement("p");
+      commentElement.textContent = comment.text;
+      commentsList.appendChild(commentElement);
+    });
+  }
+});
