@@ -121,55 +121,72 @@ if (detailsPage) {
   });
 }
 
-// Firebase Configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyCuqdh6yGCEw_oF7EuRYNXmYjFKpQ-eis0",
-  authDomain: "wander-lens.firebaseapp.com",
-  databaseURL: "https://wander-lens.firebaseio.com",
-  projectId: "wander-lens",
-  storageBucket: "wander-lens.firebasestorage.app",
-  messagingSenderId: "714629855391",
-  appId: "1:714629855391:web:b9a7bbd2c8112629b30aaa",
-};
-
-// Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
-
-// DOM Elements
+// DOM Elements for comment section
 const commentBox = document.getElementById("comment-box");
 const submitButton = document.getElementById("submit-comment");
 const commentsList = document.getElementById("comments-list");
 
-// Get current image ID from URL
-const currentImage = new URLSearchParams(window.location.search).get("image");
+// Get current image ID from the URL (make sure this is being set properly on the "details.html" page)
+const currentImageId = new URLSearchParams(window.location.search).get("image");
 
-// Set image and caption dynamically (adjust as per your folder structure and caption logic)
-detailImage.src = `images/${currentImage}.jpg`;
-detailCaption.innerHTML = `Details for image: ${currentImage}`;
+// Logging for debugging
+console.log("Current Image ID:", currentImageId);
+
+// Set image and caption dynamically
+const detailImage = document.getElementById("detail-image");
+const detailCaption = document.getElementById("detail-caption");
+
+if (currentImageId) {
+  // Check if the currentImageId corresponds to one of the images
+  const currentImage = images[currentImageId];
+  if (currentImage) {
+    detailImage.src = currentImage.src;
+    detailCaption.innerHTML = currentImage.captions
+      .map((line) => `<p>${line}</p>`)
+      .join("");
+  } else {
+    console.error("No image found for this ID.");
+  }
+} else {
+  console.error("No image ID provided in URL.");
+}
 
 // Submit Comment
 submitButton.addEventListener("click", () => {
   const comment = commentBox.value.trim();
   if (comment) {
-    const commentId = db.ref("comments/" + currentImage).push().key; // Unique comment ID
-    db.ref("comments/" + currentImage + "/" + commentId).set({
+    const comments = JSON.parse(localStorage.getItem(currentImageId)) || [];
+    const newComment = {
       text: comment,
       timestamp: Date.now(),
-    });
+    };
+    comments.push(newComment);
+    localStorage.setItem(currentImageId, JSON.stringify(comments));
+
+    console.log("Comment successfully submitted.");
     commentBox.value = ""; // Clear the input
+    loadComments(); // Reload comments after submission
+  } else {
+    console.log("Comment input is empty.");
   }
 });
 
 // Load Comments
-db.ref("comments/" + currentImage).on("value", (snapshot) => {
+function loadComments() {
+  const comments = JSON.parse(localStorage.getItem(currentImageId)) || [];
   commentsList.innerHTML = ""; // Clear existing comments
-  const comments = snapshot.val();
-  if (comments) {
-    Object.values(comments).forEach((comment) => {
+
+  if (comments.length > 0) {
+    console.log("Loaded Comments:", comments);
+    comments.forEach((comment) => {
       const commentElement = document.createElement("p");
       commentElement.textContent = comment.text;
       commentsList.appendChild(commentElement);
     });
+  } else {
+    console.log("No comments available.");
   }
-});
+}
+
+// Load comments when the page is loaded
+loadComments();
