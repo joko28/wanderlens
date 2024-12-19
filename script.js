@@ -20,7 +20,8 @@ const images = [
     src: "images/joakim-nadell-K67sBVqLLuw-unsplash.jpg",
     captions: [
       "Credit: Joakim Nadell, May 28, 2018.",
-      "Location: København, Denmark. Axel Towers (Copenhagen) by Lundgaard & Tranberg.",
+      "Location: København, Denmark.",
+      "Title: Axel Towers (Copenhagen) by Lundgaard & Tranberg.",
     ],
   },
   {
@@ -44,7 +45,12 @@ const images = [
   },
   {
     src: "images/alex-wong-l5Tzv1alcps-unsplash.jpg",
-    captions: ["Credit: Alex Wong."],
+    captions: [
+      "Credit: Alex Wong, May 13, 2015.",
+      "Location: Hong Kong China.",
+      "Title: China Hong Kong City Tower 2",
+      "Orange reflective architecture.",
+    ],
   },
   {
     src: "images/lance-anderson-QdAAasrZhdk-unsplash.jpg",
@@ -52,7 +58,11 @@ const images = [
   },
   {
     src: "images/anders-jilden-Sc5RKXLBjGg-unsplash.jpg",
-    captions: ["Credit: Anders Jilden."],
+    captions: [
+      "Credit: Anders Jilden.",
+      "Location: Sundbyberg, Sweden.",
+      "The folding exterior of Tuletornen creates an interesting mix of shadows and highlights.",
+    ],
   },
   {
     src: "images/julien-moreau-688Fna1pwOQ-unsplash.jpg",
@@ -64,7 +74,11 @@ const images = [
   },
   {
     src: "images/grant-lemons-jTCLppdwSEc-unsplash.jpg",
-    captions: ["Credit: Grant Lemons."],
+    captions: [
+      "Credit: Grant Lemons, April 4, 2016.",
+      "Location: Berlin, Germany.",
+      "Title: Modern apartmet building",
+    ],
   },
 ];
 
