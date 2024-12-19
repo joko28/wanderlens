@@ -1,23 +1,35 @@
 // Image Details
 const images = [
-  // {
-  //   src: "images/giang-nguyen-rv3YPJbedhY-unsplash.jpg",
-  //   captions: ["Credit: Giang Nguyen."],
-  // },
-  // {
-  //   src: "images/guillaume-didelet-zTTceeGcKsU-unsplash.jpg",
-  //   captions: ["Credit: Guillaume Didelet."],
-  // },
-  // {
-  //   src: "images/max-fuchs-DG6q0r7RYS8-unsplash.jpg",
-  //   captions: ["Credit: Max Fuchs."],
-  // },
+  {
+    src: "images/biel-morro-d0xjEv-WJQk-unsplash.jpg",
+    captions: [
+      "Credit: Biel Morro, November 24, 2017.",
+      "Location: Barcelona, Spain.",
+      "Church in Tibidabo.",
+    ],
+  },
+  {
+    src: "images/ryan-spencer-WJDR8_QxVR8-unsplash.jpg",
+    captions: [
+      "Credit: Ryan Spencer, July 31, 2018.",
+      "Location: Oia, Greece.",
+      "Greek cottage.",
+    ],
+  },
+  {
+    src: "images/simone-hutsch-TqEjlOTmF5U-unsplash.jpg",
+    captions: [
+      "Credit: Simone Hutsch, February 27, 2018.",
+      "Location: Berlin, Germany.",
+      "Hotel Motel One Berlin-Upper West.",
+    ],
+  },
   {
     src: "images/jimmy-chang-ACt8ycSzpdE-unsplash.jpg",
     captions: [
       "Credit: Jimmy Chang, Feb. 7, 2018.",
       "Location: Chaoyang, China.",
-      "Title: The Beijing Galaxy Soho",
+      "The Beijing Galaxy Soho",
     ],
   },
   {
@@ -25,7 +37,7 @@ const images = [
     captions: [
       "Credit: Joakim Nadell, May 28, 2018.",
       "Location: København, Denmark.",
-      "Title: Axel Towers (Copenhagen) by Lundgaard & Tranberg.",
+      "Axel Towers (Copenhagen) by Lundgaard & Tranberg.",
     ],
   },
   {
@@ -52,17 +64,12 @@ const images = [
       "Orange sunshine.",
     ],
   },
-
-  // {
-  //   src: "images/kellen-riggin-105M1xsnV4o-unsplash.jpg",
-  //   captions: ["Credit: Kellen Riggin."],
-  // },
   {
     src: "images/christian-perner-1fEQTFhcEXU-unsplash.jpg",
     captions: [
       "Credit: Christian Perner, August 3, 2017.",
       "Location: New York, United States.",
-      "Title: The FUlton Center.",
+      "The FUlton Center.",
     ],
   },
   {
@@ -94,7 +101,7 @@ const images = [
     captions: [
       "Credit: Ann Fossa, March 29, 2019.",
       "Location: Moscow-City, Moscow, Russia.",
-      "Title: Evolution Tower.",
+      "Evolution Tower.",
     ],
   },
   {
@@ -102,7 +109,7 @@ const images = [
     captions: [
       "Credit: Alexandr Bormotin, November 5, 2018.",
       "Location: Moscow, Russia.",
-      "Title: Mercury Tower, Moscow.",
+      "Mercury Tower, Moscow.",
     ],
   },
   {
@@ -113,23 +120,96 @@ const images = [
       "Paris buildings.",
     ],
   },
-
   {
-    src: "images/.jpg",
-    captions: ["Credit: , .", "Location: , .", "Title: , ."],
+    src: "images/dorien-beernink-0BFbMv3Y3dY-unsplash.jpg",
+    captions: [
+      "Credit: Dorien Beernink, May 4, 2019.",
+      "Location: Copenhagen, Denmark.",
+      "Architecture in Denmark, Copenhagen.",
+    ],
   },
+  {
+    src: "images/jericho-cervantes-pDtBVxu2N-I-unsplash.jpg",
+    captions: [
+      "Credit: Jericho Cervantes, March 1, 2019.",
+      "Location: New York City, United States.",
+      "Highline.",
+    ],
+  },
+  {
+    src: "images/robz-bM8PSh6vf8s-unsplash.jpg",
+    captions: [
+      "Credit: ROBZ, February 7, 2019.",
+      "Location: Montpellier, France.",
+      "WAVE.",
+    ],
+  },
+  {
+    src: "images/jayden-chong-DFqa4Fq5LNE-unsplash.jpg",
+    captions: [
+      "Credit: Jayden Chong, November 16, 2018.",
+      "Location: Taipei, Taiwan.",
+      "NTNU Art Museum.",
+    ],
+  },
+  {
+    src: "images/jonas-jacobsson-FxGIEI0dWAM-unsplash.jpg",
+    captions: [
+      "Credit: Jonas Jacobsson, August 11, 2017.",
+      "Location: Gothenburg, Sweden.",
+      "Apartments in central Gothenburg, Sweden.",
+    ],
+  },
+  {
+    src: "images/dario-veronesi-_G4eAbP4SI4-unsplash.jpg",
+    captions: [
+      "Credit: Dario Veronesi, October 4, 2017.",
+      "Location: Piazza Antonio Fontanesi, Reggio Emilia, Italy.",
+      "Lost in the heart of the city.",
+    ],
+  },
+  {
+    src: "images/meric-dagli-J9LaQhfPoQU-unsplash.jpg",
+    captions: [
+      "Credit: Meric Dagli, February 9, 2018.",
+      "Location: New York, United States.",
+      "Flatiron District.",
+    ],
+  },
+  {
+    src: "images/timothy-chan-HprJoPvgk-s-unsplash.jpg",
+    captions: [
+      "Credit: Timothy Chan, October 12, 2017.",
+      "Location: Chinese Garden, Singapore.",
+      "White and red castle.",
+    ],
+  },
+
+  // {
+  //   src: "images/.jpg",
+  //   captions: ["Credit: , .", "Location: , .", "."],
+  // },
+
+  // {
+  //   src: "images/.jpg",
+  //   captions: ["Credit: , .", "Location: , .", "."],
+  // },
 
   // horizontal images
   {
     src: "images/lance-anderson-QdAAasrZhdk-unsplash.jpg",
-    captions: ["Credit: Lance Anderson."],
+    captions: [
+      "Credit: Lance Anderson.",
+      "Location: Cleveland, United States.",
+      "The Rock and Roll Hall of Fame and Museum.",
+    ],
   },
   {
     src: "images/alex-wong-l5Tzv1alcps-unsplash.jpg",
     captions: [
       "Credit: Alex Wong, May 13, 2015.",
       "Location: Hong Kong China.",
-      "Title: China Hong Kong City Tower 2",
+      "China Hong Kong City Tower 2",
       "Orange reflective architecture.",
     ],
   },
@@ -146,12 +226,16 @@ const images = [
     captions: [
       "Credit: Julian Moreau, April 13, 2016.",
       "Location: Los Angeles, California.",
-      "Title: The Broad, Abstract white facade edge.",
+      "The Broad, Abstract white facade edge.",
     ],
   },
   {
     src: "images/matthew-henry-VviFtDJakYk-unsplash.jpg",
-    captions: ["Credit: Matthew Henry."],
+    captions: [
+      "Credit: Matthew Henry.",
+      "Location: Financial District, Toronto, Canada.",
+      "Foggy skyscrapers.",
+    ],
   },
   {
     src: "images/grant-lemons-jTCLppdwSEc-unsplash.jpg",
