@@ -1,20 +1,24 @@
 // Image Details
 const images = [
-  {
-    src: "images/giang-nguyen-rv3YPJbedhY-unsplash.jpg",
-    captions: ["Credit: Giang Nguyen."],
-  },
-  {
-    src: "images/guillaume-didelet-zTTceeGcKsU-unsplash.jpg",
-    captions: ["Credit: Guillaume Didelet."],
-  },
-  {
-    src: "images/max-fuchs-DG6q0r7RYS8-unsplash.jpg",
-    captions: ["Credit: Max Fuchs."],
-  },
+  // {
+  //   src: "images/giang-nguyen-rv3YPJbedhY-unsplash.jpg",
+  //   captions: ["Credit: Giang Nguyen."],
+  // },
+  // {
+  //   src: "images/guillaume-didelet-zTTceeGcKsU-unsplash.jpg",
+  //   captions: ["Credit: Guillaume Didelet."],
+  // },
+  // {
+  //   src: "images/max-fuchs-DG6q0r7RYS8-unsplash.jpg",
+  //   captions: ["Credit: Max Fuchs."],
+  // },
   {
     src: "images/jimmy-chang-ACt8ycSzpdE-unsplash.jpg",
-    captions: ["Credit: Jimmy Chang."],
+    captions: [
+      "Credit: Jimmy Chang, Feb. 7, 2018.",
+      "Location: Chaoyang, China.",
+      "Title: The Beijing Galaxy Soho",
+    ],
   },
   {
     src: "images/joakim-nadell-K67sBVqLLuw-unsplash.jpg",
@@ -29,19 +33,96 @@ const images = [
     captions: [
       "Credit: Howard Bouchevereau, Feb. 24, 2019.",
       "Location: Rennes, France.",
+      "Rennes architecture.",
     ],
   },
   {
-    src: "images/kellen-riggin-105M1xsnV4o-unsplash.jpg",
-    captions: ["Credit: Kellen Riggin."],
+    src: "images/nikolay-vorobyev-QJ2HGuSSQz0-unsplash.jpg",
+    captions: [
+      "Credit: Nikolay Vorobyev, December 5, 2017.",
+      "Location: Moscow, Russia.",
+      "Red square.",
+    ],
   },
   {
-    src: "images/mathias-reding-5HUg48NGlwc-unsplash.jpg",
-    captions: ["Credit: Mathias Reding."],
+    src: "images/simone-hutsch-l8fyK9RS-OU-unsplash.jpg",
+    captions: [
+      "Credit:  Simone Hutsch, June 18, 2018.",
+      "Location: Vauxhall, London, United Kingdom.",
+      "Orange sunshine.",
+    ],
+  },
+
+  // {
+  //   src: "images/kellen-riggin-105M1xsnV4o-unsplash.jpg",
+  //   captions: ["Credit: Kellen Riggin."],
+  // },
+  {
+    src: "images/christian-perner-1fEQTFhcEXU-unsplash.jpg",
+    captions: [
+      "Credit: Christian Perner, August 3, 2017.",
+      "Location: New York, United States.",
+      "Title: The FUlton Center.",
+    ],
   },
   {
-    src: "images/mathias-reding-JoI6kkQbuAk-unsplash.jpg",
-    captions: ["Credit: Mathias Reding."],
+    src: "images/joel-filipe-kupusAgaWZg-unsplash.jpg",
+    captions: [
+      "Credit: Joel Filipe, March 16, 2017.",
+      "Location: Madrid, Spain.",
+    ],
+  },
+
+  {
+    src: "images/joshua-fuller-N2q8hRVzEg8-unsplash.jpg",
+    captions: [
+      "Credit: Joshua Fuller, August 2, 2017.",
+      "Location: London, United Kingdom.",
+      "Blue, red, and purple facade.",
+    ],
+  },
+  {
+    src: "images/victor-yj-Ue4yoyuo-unsplash.jpg",
+    captions: [
+      "Credit: Victor, April 7, 2018.",
+      "Location: Art Science Museum, Singapore.",
+      "Lotus.",
+    ],
+  },
+  {
+    src: "images/ann-fossa-CmSwG8Jqs48-unsplash.jpg",
+    captions: [
+      "Credit: Ann Fossa, March 29, 2019.",
+      "Location: Moscow-City, Moscow, Russia.",
+      "Title: Evolution Tower.",
+    ],
+  },
+  {
+    src: "images/alexandr-bormotin-jj3PpeBIlLA-unsplash.jpg",
+    captions: [
+      "Credit: Alexandr Bormotin, November 5, 2018.",
+      "Location: Moscow, Russia.",
+      "Title: Mercury Tower, Moscow.",
+    ],
+  },
+  {
+    src: "images/david-east-6psstU2DLKs-unsplash.jpg",
+    captions: [
+      "Credit: David East, June 7, 2017.",
+      "Location: Paris, France.",
+      "Paris buildings.",
+    ],
+  },
+
+  {
+    src: "images/.jpg",
+    captions: ["Credit: , .", "Location: , .", "Title: , ."],
+  },
+
+  // horizontal images
+  {
+    src: "images/lance-anderson-QdAAasrZhdk-unsplash.jpg",
+    captions: ["Credit: Lance Anderson."],
   },
   {
     src: "images/alex-wong-l5Tzv1alcps-unsplash.jpg",
@@ -53,10 +134,6 @@ const images = [
     ],
   },
   {
-    src: "images/lance-anderson-QdAAasrZhdk-unsplash.jpg",
-    captions: ["Credit: Lance Anderson."],
-  },
-  {
     src: "images/anders-jilden-Sc5RKXLBjGg-unsplash.jpg",
     captions: [
       "Credit: Anders Jilden.",
@@ -66,7 +143,11 @@ const images = [
   },
   {
     src: "images/julien-moreau-688Fna1pwOQ-unsplash.jpg",
-    captions: ["Credit: Julian Moreau."],
+    captions: [
+      "Credit: Julian Moreau, April 13, 2016.",
+      "Location: Los Angeles, California.",
+      "Title: The Broad, Abstract white facade edge.",
+    ],
   },
   {
     src: "images/matthew-henry-VviFtDJakYk-unsplash.jpg",
@@ -77,7 +158,7 @@ const images = [
     captions: [
       "Credit: Grant Lemons, April 4, 2016.",
       "Location: Berlin, Germany.",
-      "Title: Modern apartmet building",
+      "Modern apartmet building",
     ],
   },
 ];
